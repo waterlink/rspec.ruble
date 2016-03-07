@@ -31,7 +31,9 @@ module Spec
       end
 
       def run_focussed(stdout, options={})
-        options.merge!({:files => [single_file], :line => ENV['TM_LINE_NUMBER']})
+        line = ENV['TM_LINE_NUMBER']
+        filename = "#{single_file}:#{line}"
+        options.merge!({:files => [filename]})
         run(stdout, options)
       end
 
