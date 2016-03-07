@@ -1,7 +1,7 @@
 require 'ruble'
 
 command t(:run_single_example) do |cmd|
-  cmd.key_binding = 'M1+M2+R'
+  cmd.key_binding = 'F9'
   cmd.scope = 'source.ruby.rspec'
   cmd.output = :show_as_html
   cmd.input = :selection, :line
